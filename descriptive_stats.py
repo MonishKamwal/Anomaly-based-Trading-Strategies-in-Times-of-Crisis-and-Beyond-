@@ -190,21 +190,21 @@ with pd.ExcelWriter('./Descriptive Stats Results/descriptive_statistics_tables.x
 # with open('descriptive_statistics_tables.tex', 'w') as f:
 #     f.write(latex_string)
 
-# Correlation Matrix on Excess Returns of Anomalies for Each Regime
-pre_crisis_corr = pre_crisis_returns[anomaly_cols].corr().round(2)
-crisis_corr = crisis_returns[anomaly_cols].corr().round(2)
-post_crisis_corr = post_crisis_returns[anomaly_cols].corr().round(2)
-print("\n\n=== Correlation Matrix: Pre-Crisis ===\n")
-print(pre_crisis_corr)
-print("\n\n=== Correlation Matrix: Crisis ===\n")
-print(crisis_corr)
-print("\n\n=== Correlation Matrix: Post-Crisis ===\n")
-print(post_crisis_corr)
-# Export Correlation Matrices to Excel
-with pd.ExcelWriter('./Descriptive Stats Results/correlation_matrices.xlsx') as writer:
-    pre_crisis_corr.to_excel(writer, sheet_name='Pre-Crisis')
-    crisis_corr.to_excel(writer, sheet_name='Crisis')
-    post_crisis_corr.to_excel(writer, sheet_name='Post-Crisis')
+# # Correlation Matrix on Excess Returns of Anomalies for Each Regime
+# pre_crisis_corr = pre_crisis_returns[anomaly_cols].corr().round(2)
+# crisis_corr = crisis_returns[anomaly_cols].corr().round(2)
+# post_crisis_corr = post_crisis_returns[anomaly_cols].corr().round(2)
+# print("\n\n=== Correlation Matrix: Pre-Crisis ===\n")
+# print(pre_crisis_corr)
+# print("\n\n=== Correlation Matrix: Crisis ===\n")
+# print(crisis_corr)
+# print("\n\n=== Correlation Matrix: Post-Crisis ===\n")
+# print(post_crisis_corr)
+# # Export Correlation Matrices to Excel
+# with pd.ExcelWriter('./Descriptive Stats Results/correlation_matrices.xlsx') as writer:
+#     pre_crisis_corr.to_excel(writer, sheet_name='Pre-Crisis')
+#     crisis_corr.to_excel(writer, sheet_name='Crisis')
+#     post_crisis_corr.to_excel(writer, sheet_name='Post-Crisis')
 
 
 # Time-series plot: 12-month rolling mean of excess returns for each anomaly with regime shading
